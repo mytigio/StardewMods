@@ -40,7 +40,9 @@ namespace RangeDisplay.Framework.RangeHandling.RangeCreators
         /// <returns>Whether range can be created for it.</returns>
         public bool CanCreateRangeFor(SObject obj)
         {
-            return obj.name.ToLower().Contains("sprinkler");
+                if (obj != null) {
+                    return obj.name.ToLower().Contains("sprinkler");
+                }
         }
 
         /// <summary>Creates a range.</summary>
